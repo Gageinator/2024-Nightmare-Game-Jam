@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwv2ed01dpsdw"]
+
+[ext_resource type="Texture2D" uid="uid://drlp1j4e24wed" path="res://assets/rzwb5r0zcni71.jpg" id="1_ft211"]
+[ext_resource type="Script" path="res://scripts/spooky_boi.gd" id="1_uvmnv"]
+[ext_resource type="AudioStream" uid="uid://c7ep7dmdr3prg" path="res://assets/Static_Sound_3.wav" id="3_7xklp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v7tbi"]
+
+[node name="SpookyBoi" type="CharacterBody2D"]
+script = ExtResource("1_uvmnv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_v7tbi")
+
+[node name="Rzwb5r0Zcni71" type="Sprite2D" parent="."]
+position = Vector2(0.0066735, -4.47035e-08)
+scale = Vector2(0.0266845, 0.0267023)
+texture = ExtResource("1_ft211")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_7xklp")
+autoplay = true
