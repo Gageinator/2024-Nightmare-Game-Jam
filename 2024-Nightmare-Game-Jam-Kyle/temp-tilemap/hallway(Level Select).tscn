@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://clilyrgkt1o14" path="res://assets/Temp2.png" id="1_8an82"]
 [ext_resource type="PackedScene" uid="uid://utade6cxpwll" path="res://scenes/bingus.tscn" id="2_dgv7j"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5l0b4"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vfyk6"]
 texture = ExtResource("1_8an82")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
@@ -489,7 +489,7 @@ texture_region_size = Vector2i(64, 64)
 
 [sub_resource type="TileSet" id="TileSet_f6e4b"]
 tile_size = Vector2i(64, 64)
-sources/2 = SubResource("TileSetAtlasSource_5l0b4")
+sources/2 = SubResource("TileSetAtlasSource_vfyk6")
 
 [node name="Hallway" type="Node2D"]
 
