@@ -141,19 +141,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Bingus" type="CharacterBody2D"]
+[node name="Bingus" type="CharacterBody2D" groups=["player_group"]]
 script = ExtResource("1_h0iiq")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player_group"]]
 shape = SubResource("RectangleShape2D_sie1r")
 
-[node name="Bingus" type="Sprite2D" parent="."]
+[node name="Bingus" type="Sprite2D" parent="." groups=["player_group"]]
 visible = false
 position = Vector2(-0.0624998, -0.0625)
 scale = Vector2(0.0894444, 0.0894444)
 texture = ExtResource("1_jmcay")
 
-[node name="PlayerSprites" type="AnimatedSprite2D" parent="."]
+[node name="PlayerSprites" type="AnimatedSprite2D" parent="." groups=["player_group"]]
 position = Vector2(0, -12)
 scale = Vector2(0.142308, 0.142308)
 sprite_frames = SubResource("SpriteFrames_66x7i")
