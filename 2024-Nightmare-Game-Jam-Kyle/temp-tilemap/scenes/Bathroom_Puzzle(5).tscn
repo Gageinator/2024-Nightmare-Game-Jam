@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dmunh8xo0w401"]
+[gd_scene load_steps=6 format=3 uid="uid://dldl4ssldemvj"]
 
-[ext_resource type="Texture2D" uid="uid://clilyrgkt1o14" path="res://assets/Temp2.png" id="1_iunch"]
-[ext_resource type="PackedScene" uid="uid://utade6cxpwll" path="res://scenes/bingus.tscn" id="2_2dxyf"]
-[ext_resource type="Script" path="res://scenes/area_2d.gd" id="3_f6lis"]
+[ext_resource type="Texture2D" uid="uid://clilyrgkt1o14" path="res://assets/Temp2.png" id="1_revsp"]
+[ext_resource type="PackedScene" uid="uid://utade6cxpwll" path="res://scenes/bingus.tscn" id="2_tew6i"]
+[ext_resource type="PackedScene" uid="uid://k4xinxgu18v3" path="res://scenes/door.tscn" id="3_wl8f0"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s4wjb"]
-texture = ExtResource("1_iunch")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tjmts"]
+texture = ExtResource("1_revsp")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
@@ -488,40 +488,47 @@ texture_region_size = Vector2i(64, 64)
 28:15/0 = 0
 29:15/0 = 0
 
-[sub_resource type="TileSet" id="TileSet_7hve7"]
+[sub_resource type="TileSet" id="TileSet_ko50u"]
 tile_size = Vector2i(64, 64)
-sources/0 = SubResource("TileSetAtlasSource_s4wjb")
+sources/0 = SubResource("TileSetAtlasSource_tjmts")
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_camhr"]
-vertices = PackedVector2Array(1165.81, 48.2031, -1186.93, 48.2031, -1124.31, -3169.09, 1061.43, -3169.09)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(1176.12, 58.2036, 1071.11, -3179.08, -1134.12, -3179.08, -1197.12, 58.2036)])
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bn7te"]
-
-[node name="sroot" type="Node2D"]
+[node name="Node2D" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_7hve7")
+tile_set = SubResource("TileSet_ko50u")
 format = 2
-layer_0/tile_data = PackedInt32Array(131071, 0, 0, 65536, 0, 0, 65535, 196608, 1, -1, 196608, 1, -65537, 196608, 1, -131073, 196608, 1, 0, 196608, 1, -65536, 196608, 1, -131072, 196608, 1, -196608, 196608, 1, -196609, 196608, 1, -262145, 196608, 1, -327681, 196608, 1, -393217, 196608, 1, -458753, 196608, 1, -524289, 196608, 1, -589825, 196608, 1, -655361, 196608, 1, -720897, 196608, 1, -786433, 196608, 1, -851969, 196608, 1, -917505, 196608, 1, -983041, 196608, 1, -1048577, 196608, 1, -1114113, 196608, 1, -1179649, 196608, 1, -1245185, 196608, 1, -1310721, 196608, 1, -262144, 196608, 1, -327680, 196608, 1, -393216, 196608, 1, -458752, 196608, 1, -524288, 196608, 1, -589824, 196608, 1, -655360, 196608, 1, -720896, 196608, 1, -786432, 196608, 1, -851968, 196608, 1, -917504, 196608, 1, -983040, 196608, 1, -1048576, 196608, 1, -1114112, 196608, 1, -1179648, 196608, 1, -1245184, 196608, 1, -1310720, 196608, 1, -1376256, 196608, 1, -1376257, 196608, 1, -1441793, 196608, 1, -1507329, 196608, 1, -1572865, 196608, 1, -1638401, 196608, 1, -1703937, 196608, 1, -1769473, 196608, 1, -1835009, 196608, 1, -1900545, 196608, 1, -1966081, 196608, 1, -2031617, 196608, 1, -2097153, 196608, 1, -2162689, 196608, 1, -2228225, 196608, 1, -2293761, 196608, 1, -2359297, 196608, 1, -2424833, 196608, 1, -2490369, 196608, 1, -2555905, 196608, 1, -2621441, 196608, 1, -2686977, 196608, 1, -2752513, 196608, 1, -2818048, 196608, 1, -2752512, 196608, 1, -2686976, 196608, 1, -2621440, 196608, 1, -2555904, 196608, 1, -2490368, 196608, 1, -2424832, 196608, 1, -2359296, 196608, 1, -2293760, 196608, 1, -2228224, 196608, 1, -2162688, 196608, 1, -2097152, 196608, 1, -2031616, 196608, 1, -1966080, 196608, 1, -1900544, 196608, 1, -1835008, 196608, 1, -1769472, 196608, 1, -1703936, 196608, 1, -1638400, 196608, 1, -1572864, 196608, 1, -1507328, 196608, 1, -1441792, 196608, 1, -2818049, 0, 0, -2883584, 0, 0, -2686978, 0, 0, -2555906, 0, 0, -2752511, 0, 0, -2621439, 0, 0, -2818050, 0, 1, -2883586, 0, 1, -2883585, 0, 1, -2949120, 0, 1, -2949119, 0, 1, -2883583, 0, 1, -2818047, 0, 1, -2752514, 0, 1, -2621442, 0, 1, -2686975, 0, 1, -2490370, 0, 1, -2424834, 0, 1, -2359298, 0, 1, -2293762, 0, 1, -2228226, 0, 1, -2162690, 0, 1, -2097154, 0, 1, -2031618, 0, 1, -1966082, 0, 1, -1900546, 0, 1, -1835010, 0, 1, -1769474, 0, 1, -1703938, 0, 1, -1638402, 0, 1, -1572866, 0, 1, -1507330, 0, 1, -1441794, 0, 1, -1376258, 0, 1, -1310722, 0, 1, -1245186, 0, 1, -1179650, 0, 1, -1114114, 0, 1, -1048578, 0, 1, -983042, 0, 1, -917506, 0, 1, -851970, 0, 1, -786434, 0, 1, -720898, 0, 1, -655362, 0, 1, -589826, 0, 1, -524290, 0, 1, -458754, 0, 1, -393218, 0, 1, -327682, 0, 1, -262146, 0, 1, -196610, 0, 1, -131074, 0, 1, -65538, 0, 1, -2, 0, 1, 65534, 0, 1, 131070, 0, 1, 196606, 0, 1, 196607, 0, 1, 131072, 0, 1, 131073, 0, 1, 65537, 0, 1, 1, 0, 1, -65535, 0, 1, -131071, 0, 1, -196607, 0, 1, -262143, 0, 1, -327679, 0, 1, -393215, 0, 1, -458751, 0, 1, -524287, 0, 1, -589823, 0, 1, -655359, 0, 1, -720895, 0, 1, -786431, 0, 1, -851967, 0, 1, -917503, 0, 1, -983039, 0, 1, -1048575, 0, 1, -1114111, 0, 1, -1179647, 0, 1, -1245183, 0, 1, -1310719, 0, 1, -1376255, 0, 1, -1441791, 0, 1, -1507327, 0, 1, -1572863, 0, 1, -1638399, 0, 1, -1703935, 0, 1, -1769471, 0, 1, -1835007, 0, 1, -1900543, 0, 1, -1966079, 0, 1, -2031615, 0, 1, -2097151, 0, 1, -2162687, 0, 1, -2228223, 0, 1, -2293759, 0, 1, -2359295, 0, 1, -2424831, 0, 1, -2490367, 0, 1, -2555903, 0, 1)
+layer_0/tile_data = PackedInt32Array(196602, 0, 1, 196603, 0, 0, 196604, 0, 1, 196605, 196608, 1, 65530, 196608, 1, 65529, 196608, 1, 131065, 196608, 1, 196601, 196608, 1, 131066, 196608, 1, 131067, 196608, 1, 65531, 196608, 1, 65532, 196608, 1, 131068, 196608, 1, 131069, 196608, 1, 65533, 196608, 1, 131064, 196608, 1, 131063, 196608, 1, 131062, 0, 0, 131070, 196608, 1, 131071, 196608, 1, 65536, 0, 0, -5, 196608, 1, -65541, 196608, 1, -131077, 196608, 1, -196613, 196608, 1, -262149, 0, 0, -262150, 0, 1, -196614, 0, 1, -131078, 0, 1, -65542, 0, 1, -6, 0, 1, -7, 0, 1, -8, 0, 1, 65528, 0, 1, 65527, 0, 1, 65526, 0, 1, 65525, 0, 1, 131061, 0, 1, 196597, 0, 1, 196598, 0, 1, 196599, 0, 1, 196600, 0, 1, 262136, 0, 1, 262137, 0, 1, 262138, 0, 1, 262139, 0, 1, 262140, 0, 1, 262141, 0, 1, 262142, 0, 1, 196606, 0, 1, 196607, 0, 1, 131072, 0, 1, 131073, 0, 1, 65537, 0, 1, 1, 0, 1, 0, 0, 1, 65535, 0, 1, 65534, 0, 1, -2, 0, 1, -3, 0, 1, -4, 0, 1, -65540, 0, 1, -131076, 0, 1, -196612, 0, 1, -262148, 0, 1, -327684, 0, 1, -327685, 0, 1, -327686, 0, 1)
 
-[node name="Bingus" parent="." instance=ExtResource("2_2dxyf")]
-position = Vector2(0, -2675)
+[node name="Bingus" parent="." instance=ExtResource("2_tew6i")]
+position = Vector2(-292, 85)
 scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="Bingus"]
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-scale = Vector2(-0.0476141, 0.859053)
-navigation_polygon = SubResource("NavigationPolygon_camhr")
+[node name="PosMarker" type="Node2D" parent="."]
+position = Vector2(-292, 75)
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(0, -2509)
-scale = Vector2(-6.5, 1.33333)
-script = ExtResource("3_f6lis")
+[node name="Correct_Door" parent="." instance=ExtResource("3_wl8f0")]
+position = Vector2(-289, 160)
+rotation = 1.5708
+scale = Vector2(3.42584, 2.80415)
+targetScene = "Bathroom_Puzzle(Final).tscn"
+targetPosition = Vector2(-3, 2)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_bn7te")
+[node name="Wrong_Door3" parent="." instance=ExtResource("3_wl8f0")]
+position = Vector2(-607, 95)
+scale = Vector2(3.42584, 2.80415)
+targetScene = "bathroom_maze_main.tscn"
+targetPosition = Vector2(343, -287)
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[node name="Wrong_Door2" parent="." instance=ExtResource("3_wl8f0")]
+position = Vector2(28, 95)
+scale = Vector2(3.42584, 2.80415)
+targetScene = "bathroom_maze_main.tscn"
+targetPosition = Vector2(-354, -287)
+
+[node name="Wrong_Door4" parent="." instance=ExtResource("3_wl8f0")]
+position = Vector2(-288, -287)
+rotation = 1.5708
+scale = Vector2(3.42584, 2.80415)
+targetScene = "bathroom_maze_main.tscn"

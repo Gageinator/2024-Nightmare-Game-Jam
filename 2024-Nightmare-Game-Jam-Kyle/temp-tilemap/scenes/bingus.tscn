@@ -141,7 +141,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Bingus" type="CharacterBody2D"]
+[node name="Bingus" type="CharacterBody2D" groups=["player_group"]]
 script = ExtResource("1_h0iiq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
