@@ -5,12 +5,15 @@
 [ext_resource type="AudioStream" uid="uid://c7ep7dmdr3prg" path="res://assets/Static_Sound_3.wav" id="3_7xklp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v7tbi"]
+size = Vector2(20, 13.4426)
 
 [node name="SpookyBoi" type="CharacterBody2D"]
+scale = Vector2(6.1, 6.1)
 script = ExtResource("1_uvmnv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
+position = Vector2(0, 3.27869)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_v7tbi")
 
 [node name="Rzwb5r0Zcni71" type="Sprite2D" parent="."]
@@ -23,3 +26,9 @@ texture = ExtResource("1_ft211")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_7xklp")
 autoplay = true
+
+[node name="TargetingTimer" type="Timer" parent="."]
+process_callback = 0
+autostart = true
+
+[connection signal="timeout" from="TargetingTimer" to="." method="retarget"]

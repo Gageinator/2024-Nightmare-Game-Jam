@@ -8,6 +8,7 @@ var target: Vector2 = Vector2(100, 100)
 
 @onready var navAgent: NavigationAgent2D = $NavigationAgent2D
 
+#Called when the node enters the scene tree for the first time
 func _ready() -> void:
 	navAgent.path_desired_distance = 4
 	navAgent.target_desired_distance = 4
@@ -27,14 +28,21 @@ func setup():
 func setTarget(movementTarget: Vector2):
 	navAgent.target_position = movementTarget
 	
+#Called every visual frame
 func _process(delta: float) -> void:
 	var audioStream: AudioStreamPlayer2D = $AudioStreamPlayer2D
 	#If audio has stopped playing, start it over
 	if audioStream.playing == false:
 		audioStream.play(0)
-	pass
+		
+	if player.global_position.y >= global_position.y:
+		player.z_index = 1
+	else:
+		player.z_index = 0
 
+#Called every physics tick
 func _physics_process(delta: float) -> void:
+	#If navigation has finished
 	if navAgent.is_navigation_finished():
 		setTarget(player.global_position)
 		return
@@ -49,3 +57,6 @@ func _physics_process(delta: float) -> void:
 	else: #If target is not reachable
 		setTarget(player.global_position)
 	
+#Update target position on timer callback
+func retarget() -> void:
+	setTarget(player.global_position)
