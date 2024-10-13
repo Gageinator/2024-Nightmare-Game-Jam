@@ -25,9 +25,11 @@ var touching: bool = false
 		
 		
 func changeScene():
-	GlobalValues.PlayerSpawnPos = targetPosition
-	targetScene = "res://scenes/" + targetScene
-	get_tree().change_scene_to_file(targetScene)
+	for i in range(activeNumbers.size()):
+		if activeNumbers[i] == GlobalValues.EventFlagNum:
+			GlobalValues.PlayerSpawnPos = targetPosition
+			targetScene = "res://scenes/" + targetScene
+			get_tree().change_scene_to_file(targetScene)
 
 #func stopTouchingDoor(body: Node2D) -> void:
 #	touching = false
