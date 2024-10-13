@@ -1,13 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://crxux11kjsy5n"]
+[gd_scene load_steps=3 format=3 uid="uid://bpak01uiic7aw"]
 
-[ext_resource type="Script" path="res://scripts/actionables.gd" id="1_6kbkl"]
+[ext_resource type="Script" path="res://scripts/actionables.gd" id="1_8mouu"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4nv26"]
-size = Vector2(64, 64)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5rug"]
 
-[node name="Actionable" type="Area2D"]
+[node name="Actionable" type="Area2D" groups=["action_group"]]
 collision_layer = 16
-script = ExtResource("1_6kbkl")
+script = ExtResource("1_8mouu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_4nv26")
+shape = SubResource("RectangleShape2D_o5rug")

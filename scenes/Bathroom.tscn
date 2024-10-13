@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://ch5b4fwm6i3rf"]
+[gd_scene load_steps=12 format=3 uid="uid://ch5b4fwm6i3rf"]
 
 [ext_resource type="Texture2D" uid="uid://clilyrgkt1o14" path="res://assets/Temp2.png" id="1_0vxlj"]
-[ext_resource type="Texture2D" uid="uid://c4dccm7bjy76t" path="res://assets/Bathroom_Tiles.png" id="2_0fl6u"]
+[ext_resource type="Texture2D" uid="uid://n0eroppxf2xq" path="res://assets/Bathroom_Tiles.png" id="2_0fl6u"]
 [ext_resource type="PackedScene" uid="uid://utade6cxpwll" path="res://scenes/bingus.tscn" id="2_5hfyj"]
 [ext_resource type="PackedScene" uid="uid://k4xinxgu18v3" path="res://scenes/door.tscn" id="3_5pbh3"]
-[ext_resource type="Texture2D" uid="uid://djq6e5p75sbwi" path="res://assets/Concrete.png" id="3_n5pvn"]
+[ext_resource type="Texture2D" uid="uid://cscmrq2daenim" path="res://assets/Concrete.png" id="3_n5pvn"]
+[ext_resource type="PackedScene" uid="uid://bpak01uiic7aw" path="res://scenes/actionables.tscn" id="6_pd33s"]
+[ext_resource type="Resource" uid="uid://c7qxc4j2d5fee" path="res://dialogue/Game_Dialogue.dialogue" id="7_yl75x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wn08i"]
 texture = ExtResource("1_0vxlj")
@@ -2286,6 +2288,14 @@ scale = Vector2(2, 2)
 
 [node name="Hallway" parent="." instance=ExtResource("3_5pbh3")]
 position = Vector2(0, 95)
-scale = Vector2(6.2975, 2.84)
+scale = Vector2(6.2853, 2.84)
 targetScene = "hallway.tscn"
 targetPosition = Vector2(0, 200)
+activeNumbers = [0, 1, 2, 3, 4]
+
+[node name="Actionable" parent="." instance=ExtResource("6_pd33s")]
+position = Vector2(-96, -94)
+scale = Vector2(3.12, 3.36)
+dialogueResource = ExtResource("7_yl75x")
+dialogueStart = "medicine_cabinet"
+eventChange = 1

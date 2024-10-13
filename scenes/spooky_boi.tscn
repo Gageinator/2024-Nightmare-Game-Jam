@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwv2ed01dpsdw"]
+[gd_scene load_steps=6 format=3 uid="uid://bwv2ed01dpsdw"]
 
 [ext_resource type="Texture2D" uid="uid://drlp1j4e24wed" path="res://assets/rzwb5r0zcni71.jpg" id="1_ft211"]
 [ext_resource type="Script" path="res://scripts/spooky_boi.gd" id="1_uvmnv"]
@@ -6,6 +6,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v7tbi"]
 size = Vector2(20, 13.4426)
+
+[sub_resource type="AudioStreamPolyphonic" id="AudioStreamPolyphonic_rl4xd"]
+polyphony = 1
 
 [node name="SpookyBoi" type="CharacterBody2D"]
 scale = Vector2(6.1, 6.1)
@@ -30,4 +33,12 @@ autoplay = true
 process_callback = 0
 autostart = true
 
+[node name="CryPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource("AudioStreamPolyphonic_rl4xd")
+playback_type = 2
+
+[node name="CryTimer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="timeout" from="TargetingTimer" to="." method="retarget"]
+[connection signal="timeout" from="CryTimer" to="." method="doCry"]

@@ -141,7 +141,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vg0yj"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbaq3"]
 
 [node name="Bingus" type="CharacterBody2D" groups=["player_group"]]
 script = ExtResource("1_h0iiq")
@@ -159,11 +159,14 @@ texture = ExtResource("1_jmcay")
 position = Vector2(0, -12)
 scale = Vector2(0.142308, 0.142308)
 sprite_frames = SubResource("SpriteFrames_66x7i")
-animation = &"WalkSideways"
+animation = &"WalkDown"
 
-[node name="actionable_finder" type="Area2D" parent="."]
+[node name="Direction" type="Marker2D" parent="."]
+position = Vector2(0, 10)
+
+[node name="ActionableFinder" type="Area2D" parent="Direction"]
 collision_layer = 16
 collision_mask = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="actionable_finder"]
-shape = SubResource("RectangleShape2D_vg0yj")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Direction/ActionableFinder"]
+shape = SubResource("RectangleShape2D_rbaq3")
