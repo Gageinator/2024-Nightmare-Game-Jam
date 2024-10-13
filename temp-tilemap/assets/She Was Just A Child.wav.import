@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b4kqg8kvs3t8j"
+path="res://.godot/imported/She Was Just A Child.wav-3e3e89fa212ed9ac1239e624da2f5944.sample"
+
+[deps]
+
+source_file="res://assets/She Was Just A Child.wav"
+dest_files=["res://.godot/imported/She Was Just A Child.wav-3e3e89fa212ed9ac1239e624da2f5944.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dmhg1y8vflwes"
+path="res://.godot/imported/Coward Stop Running.wav-5f65e1e258ff9b3e6c9ce11921660896.sample"
+
+[deps]
+
+source_file="res://assets/Coward Stop Running.wav"
+dest_files=["res://.godot/imported/Coward Stop Running.wav-5f65e1e258ff9b3e6c9ce11921660896.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

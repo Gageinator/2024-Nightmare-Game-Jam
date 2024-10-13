@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bw011ybm4wm8g"
+path="res://.godot/imported/You Can't Live Without Me.wav-6fa20ca54370f87e8c5fc5874fb70610.sample"
+
+[deps]
+
+source_file="res://assets/You Can't Live Without Me.wav"
+dest_files=["res://.godot/imported/You Can't Live Without Me.wav-6fa20ca54370f87e8c5fc5874fb70610.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
