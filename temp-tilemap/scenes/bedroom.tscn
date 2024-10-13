@@ -1,13 +1,15 @@
-[gd_scene load_steps=16 format=3 uid="uid://bt8dreb7illej"]
+[gd_scene load_steps=18 format=3 uid="uid://bt8dreb7illej"]
 
 [ext_resource type="Texture2D" uid="uid://clilyrgkt1o14" path="res://assets/Temp2.png" id="1_b1vci"]
-[ext_resource type="Texture2D" uid="uid://dqcllp4aro0bn" path="res://assets/Wood_Floors_no_bg.png" id="2_71dgr"]
+[ext_resource type="Texture2D" uid="uid://2scl6bx1rdk8" path="res://assets/Wood_Floors_no_bg.png" id="2_71dgr"]
 [ext_resource type="PackedScene" uid="uid://utade6cxpwll" path="res://scenes/bingus.tscn" id="2_anggl"]
 [ext_resource type="PackedScene" uid="uid://k4xinxgu18v3" path="res://scenes/door.tscn" id="3_4j3wc"]
-[ext_resource type="Texture2D" uid="uid://bhqxg578vjcft" path="res://assets/EorW_Wood_Wall.png" id="3_xhh2i"]
-[ext_resource type="Texture2D" uid="uid://dnl53u57af66u" path="res://assets/N_Wood_Wall.png" id="4_vd47y"]
-[ext_resource type="Texture2D" uid="uid://c7oubekt48nxe" path="res://assets/S_Wood_Wall.png" id="5_0my5u"]
-[ext_resource type="Texture2D" uid="uid://djq6e5p75sbwi" path="res://assets/Concrete.png" id="6_0ph22"]
+[ext_resource type="Texture2D" uid="uid://dx2cehdcldgth" path="res://assets/EorW_Wood_Wall.png" id="3_xhh2i"]
+[ext_resource type="Texture2D" uid="uid://cf8kcfvlp5ie5" path="res://assets/N_Wood_Wall.png" id="4_vd47y"]
+[ext_resource type="Texture2D" uid="uid://kup78suq3irf" path="res://assets/S_Wood_Wall.png" id="5_0my5u"]
+[ext_resource type="Texture2D" uid="uid://cljupgh0vawat" path="res://assets/Concrete.png" id="6_0ph22"]
+[ext_resource type="PackedScene" uid="uid://crxux11kjsy5n" path="res://scenes/actionables.tscn" id="9_vaye1"]
+[ext_resource type="Resource" uid="uid://bf3vdbu4odujg" path="res://Dialogue/Family Portrait.dialogue" id="10_e7pep"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h8d68"]
 texture = ExtResource("1_b1vci")
@@ -4090,3 +4092,8 @@ position = Vector2(2, 75)
 scale = Vector2(6.48, 1)
 targetScene = "hallway.tscn"
 targetPosition = Vector2(0, 30)
+
+[node name="Actionable" parent="." instance=ExtResource("9_vaye1")]
+position = Vector2(-160, -288)
+scale = Vector2(3.28254, 3.14748)
+dialogueResource = ExtResource("10_e7pep")

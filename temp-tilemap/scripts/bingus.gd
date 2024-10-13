@@ -4,21 +4,33 @@ extends CharacterBody2D
 
 func _ready() -> void:
 	global_position = GlobalValues.PlayerSpawnPos
+	
+func _unhandled_input(event: InputEvent) -> void:
+	#Interaction code goes here
+	if Input.is_action_just_pressed("p_interact"):
+		var actionables = $Direction/ActionableFinder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action()
+			return
 
 func _process(delta: float) -> void:
 	#TODO: Make more robust and add diagonals
 	if velocity.y > 0:
 		$PlayerSprites.play("WalkDown")
 		$PlayerSprites.flip_h = false
+		$Direction.position = Vector2(0, 10)
 	elif velocity.y < 0:
 		$PlayerSprites.play("WalkUp")
 		$PlayerSprites.flip_h = false
+		$Direction.position = Vector2(0, -10)
 	elif velocity.x > 0:
 		$PlayerSprites.play("WalkSideways")
 		$PlayerSprites.flip_h = false
+		$Direction.position = Vector2(10, 0)
 	elif velocity.x < 0:
 		$PlayerSprites.play("WalkSideways")
 		$PlayerSprites.flip_h = true
+		$Direction.position = Vector2(-10, 0)
 	else:
 		$PlayerSprites.stop()
 
@@ -35,9 +47,5 @@ func _physics_process(delta: float) -> void:
 		velocity.y = y_direction * SPEED
 	else:
 		velocity.y = move_toward(velocity.y, 0, SPEED)
-		
-	#Interaction code goes here
-	if Input.is_action_just_pressed("p_interact"):
-		print("Nothin' here dumbass")
 
 	move_and_slide()

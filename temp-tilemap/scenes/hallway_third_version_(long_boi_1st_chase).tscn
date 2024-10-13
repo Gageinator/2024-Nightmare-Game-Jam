@@ -1419,6 +1419,7 @@ layer_0/tile_data = PackedInt32Array(131071, 0, 0, 65536, 0, 0, 65535, 65538, 6,
 [node name="Bingus" parent="." instance=ExtResource("2_2dxyf")]
 position = Vector2(0, -2675)
 scale = Vector2(2, 2)
+SPEED = 300
 
 [node name="Camera2D" type="Camera2D" parent="Bingus"]
 
