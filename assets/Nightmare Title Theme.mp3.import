@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cv51d53tywuw7"
+path="res://.godot/imported/Nightmare Title Theme.mp3-b9f063e7341edf0668cc95f938df565c.mp3str"
+
+[deps]
+
+source_file="res://assets/Nightmare Title Theme.mp3"
+dest_files=["res://.godot/imported/Nightmare Title Theme.mp3-b9f063e7341edf0668cc95f938df565c.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

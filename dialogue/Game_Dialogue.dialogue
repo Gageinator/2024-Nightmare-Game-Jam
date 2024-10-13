@@ -1,0 +1,68 @@
+~ family_photo
+James: My entire world in a single photo.
+James: I should check on Sam after I clean up.
+=> END
+
+~ painting1
+James: I don't even know where Janet got this one. 
+=> END
+
+~ closet
+James: I'm already dressed.
+James: Had such a long night in the office that even unwinding in the garage didn't help much.
+James: Guess I was so tired I didn't bother changing.
+=> END
+
+~ mirror
+: Your a lot slimmer than the last time you looked in the mirror.
+: The bags under your eyes is an obvious tell of the late nights.
+James: I love her, but Janet needs to lay off on the questioning. I'm fine.
+James: Besides, questioning people is my job.
+=> END
+
+~ medicine_cabinet
+: You grab a toothbrush and brush your teeth.
+: Opening the medicine cabinet, you see a multitude of different pill bottles.
+James: I don't remember ever needing most of these.
+James: Did Sam need new medication. She hasn't been feeling well so I wouldn't be suprised.
+=> END
+
+~ sam_bed
+James: Sam's not here. Janet must've took her to school already.
+James: Shit, what time is it? I have to get to work.
+=> END
+
+~ toy_box1
+: It's a large box with toys inside. For some reason you feel uneasy looking in.
+James: I'm sorry Janet but I needed to. She'll never find it here.
+=> END
+
+~ sam_closet
+:The closet is filled small dresses.
+James: I need to ask Janet to get new clothes for Sam. These ones don't fit her the best anymore.
+=> END
+
+~ office
+James: I don't need in my office right now.
+=> END
+
+~ boiler
+: The door to the boiler room.
+James: I don't need in here.
+=> END
+
+~ sofa
+James: I don't have time to relax right now.
+: But you sure as hell wish you did.
+=> END
+
+~ kitchen
+: The archway to the kitchen.
+James: I don't see Janet anywhere.
+James: At least I'll see her later tonight.
+=> END
+
+~ front_door
+: You reach for the door, but stop yourself.
+James: Damn it, forgot my keys in the bedroom.
+=> END 
