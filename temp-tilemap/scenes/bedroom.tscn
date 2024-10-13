@@ -4097,3 +4097,9 @@ targetPosition = Vector2(0, 30)
 position = Vector2(-160, -288)
 scale = Vector2(3.28254, 3.14748)
 dialogueResource = ExtResource("10_e7pep")
+
+[node name="Actionable2" parent="." instance=ExtResource("9_vaye1")]
+position = Vector2(96, -228)
+scale = Vector2(3.15955, 3.15766)
+dialogueResource = ExtResource("10_e7pep")
+dialogueStart = "bingus"
