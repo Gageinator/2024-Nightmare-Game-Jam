@@ -1421,6 +1421,7 @@ position = Vector2(0, -2675)
 scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="Bingus"]
+zoom = Vector2(1.5, 1.5)
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
 scale = Vector2(-0.0476141, 0.859053)

@@ -129,7 +129,7 @@ position = Vector2(1.63934, -0.983606)
 scale = Vector2(0.0192432, 0.0192433)
 sprite_frames = SubResource("SpriteFrames_424sk")
 animation = &"move_sideways"
-frame_progress = 0.0770153
+frame_progress = 0.461962
 
 [connection signal="timeout" from="TargetingTimer" to="." method="retarget"]
 [connection signal="timeout" from="CryTimer" to="." method="doCry"]
