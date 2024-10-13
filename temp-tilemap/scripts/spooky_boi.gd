@@ -6,6 +6,10 @@ var player: CharacterBody2D
 #default target, will get overwritten in setup
 var target: Vector2 = Vector2(100, 100)
 
+var cries: Array = ["Coward Stop Running", "Pull the Trigger You Bastard", "I Am You", "Die Just Die",
+"Says something very not nice lol", "She Was Just A Child", "You Always Run", "You Can't Live Without Me",
+"You Did This to Yourself", "You Need Me"]
+
 @onready var navAgent: NavigationAgent2D = $NavigationAgent2D
 
 #Called when the node enters the scene tree for the first time
@@ -15,6 +19,7 @@ func _ready() -> void:
 	
 	#Replace with actual character node
 	player = get_tree().root.get_node("sroot/Bingus")
+	$CryPlayer.play()
 	
 	setup.call_deferred()
 
@@ -34,6 +39,7 @@ func _process(delta: float) -> void:
 	#If audio has stopped playing, start it over
 	if audioStream.playing == false:
 		audioStream.play(0)
+		audioStream.pitch_scale = randf_range(0.9, 1.1)
 		
 	if player.global_position.y >= global_position.y:
 		player.z_index = 1
@@ -60,3 +66,15 @@ func _physics_process(delta: float) -> void:
 #Update target position on timer callback
 func retarget() -> void:
 	setTarget(player.global_position)
+
+#Timer callback for monster cries
+func doCry() -> void:
+	playRandomCry()
+		
+#Plays a random monster cry from an array
+func playRandomCry():
+	if not $CryPlayer.get_stream_playback().is_stream_playing(0):
+		var index = randi_range(0, cries.size() - 1)
+		$CryPlayer.get_stream_playback().play_stream(load("res://assets/" + cries[index] + ".wav"))
+		#Randomize the wait time
+		$CryTimer.wait_time = randf_range(10, 20)

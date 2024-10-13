@@ -2,3 +2,4 @@
 *.cfg
 *.bin
 *.ctex
+.godot/

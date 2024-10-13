@@ -15,6 +15,10 @@ run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://assets/bingus.png"
 
+[audio]
+
+buses/default_bus_layout="res://assets/default_bus_layout.tres"
+
 [autoload]
 
 GlobalValues="*res://scripts/global_values.gd"
