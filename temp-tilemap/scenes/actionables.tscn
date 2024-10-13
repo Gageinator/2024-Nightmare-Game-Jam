@@ -4,7 +4,7 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5rug"]
 
-[node name="Actionable" type="Area2D"]
+[node name="Actionable" type="Area2D" groups=["action_group"]]
 collision_layer = 16
 script = ExtResource("1_qqooc")
 

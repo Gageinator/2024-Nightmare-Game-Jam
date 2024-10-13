@@ -9,19 +9,19 @@ extends Area2D
 
 var touching: bool = false
 
-func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("p_interact"):
-		if touching: 
-			for i in range(activeNumbers.size()):
-				if activeNumbers[i] == GlobalValues.EventFlagNum:
-					changeScene.call_deferred()
-			
-	pass
+#func _physics_process(delta: float) -> void:
+#	if Input.is_action_just_pressed("p_interact"):
+#		if touching: 
+#			for i in range(activeNumbers.size()):
+#				if activeNumbers[i] == GlobalValues.EventFlagNum:
+#					changeScene.call_deferred()
+#			
+#	pass
 
-func touchingDoor(body: Node2D) -> void:
-	#print("touch")
-	if body.is_in_group("player_group"):
-		touching = true
+#func touchingDoor(body: Node2D) -> void:
+#	#print("touch")
+#	if body.is_in_group("player_group"):
+#		touching = true
 		
 		
 func changeScene():
@@ -29,5 +29,5 @@ func changeScene():
 	targetScene = "res://scenes/" + targetScene
 	get_tree().change_scene_to_file(targetScene)
 
-func stopTouchingDoor(body: Node2D) -> void:
-	touching = false
+#func stopTouchingDoor(body: Node2D) -> void:
+#	touching = false

@@ -1,8 +1,13 @@
 extends Area2D
 
+##Position to spawn the monster at
 @export var spawn_pos: Vector2 = Vector2(0,0)
+##What how fast the monster should move
 @export var enemy_speed: float = 315
+##Event flag value where the spawner is active
 @export var activeNumber: int = 0
+##Value to change the event flag to after enemy is spawned, negative values are ignored
+@export var eventChange: int = -1
 
 #Enemy scene
 var spooky_scene:PackedScene = preload("res://scenes/spooky_boi.tscn")
@@ -29,5 +34,8 @@ func doSpawn2():
 	enemy_instance.global_position = spawn_pos
 	#Set the enemy's speed
 	enemy_instance.SPEED = enemy_speed
+	
+	if eventChange > -1:
+		GlobalValues.EventFlagNum = eventChange
 	queue_free()
 	

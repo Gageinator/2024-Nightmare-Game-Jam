@@ -10,8 +10,11 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("p_interact"):
 		var actionables = $Direction/ActionableFinder.get_overlapping_areas()
 		if actionables.size() > 0:
-			actionables[0].action()
-			return
+			if actionables[0].is_in_group("action_group"):
+				actionables[0].action()
+				return
+			elif actionables[0].is_in_group("door_group"):
+				actionables[0].changeScene.call_deferred()
 
 func _process(delta: float) -> void:
 	#TODO: Make more robust and add diagonals
