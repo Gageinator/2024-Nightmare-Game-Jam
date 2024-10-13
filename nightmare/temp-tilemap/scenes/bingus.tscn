@@ -1,0 +1,160 @@
+[gd_scene load_steps=22 format=3 uid="uid://utade6cxpwll"]
+
+[ext_resource type="Script" path="res://scripts/bingus.gd" id="1_h0iiq"]
+[ext_resource type="Texture2D" uid="uid://08ofkfjhw1ao" path="res://assets/bingus.png" id="1_jmcay"]
+[ext_resource type="Texture2D" uid="uid://d2j6nqqdvaci" path="res://assets/Sprites.png" id="3_yt7oy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sie1r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3q1t3"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(0, 0, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1heeh"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(130, 0, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m01qh"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(0, 311, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a11it"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(130, 311, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yho6i"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(0, 622, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo3cn"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(130, 622, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_blyus"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(0, 0, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lgm8"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(130, 0, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1b3f"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(0, 311, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_640om"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(130, 311, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vpjdj"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(0, 622, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xy2s4"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(130, 622, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw153"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(0, 933, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwhxh"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(130, 933, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8q0w"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(0, 1244, 130, 311)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04aj4"]
+atlas = ExtResource("3_yt7oy")
+region = Rect2(130, 1244, 130, 311)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_66x7i"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3q1t3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1heeh")
+}],
+"loop": true,
+"name": &"WalkDown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m01qh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a11it")
+}],
+"loop": true,
+"name": &"WalkSideways",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yho6i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jo3cn")
+}],
+"loop": true,
+"name": &"WalkUp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_blyus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lgm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1b3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_640om")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vpjdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xy2s4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gw153")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwhxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8q0w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_04aj4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Bingus" type="CharacterBody2D" groups=["player_group"]]
+script = ExtResource("1_h0iiq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player_group"]]
+shape = SubResource("RectangleShape2D_sie1r")
+
+[node name="Bingus" type="Sprite2D" parent="." groups=["player_group"]]
+visible = false
+position = Vector2(-0.0624998, -0.0625)
+scale = Vector2(0.0894444, 0.0894444)
+texture = ExtResource("1_jmcay")
+
+[node name="PlayerSprites" type="AnimatedSprite2D" parent="." groups=["player_group"]]
+position = Vector2(0, -12)
+scale = Vector2(0.142308, 0.142308)
+sprite_frames = SubResource("SpriteFrames_66x7i")
+animation = &"WalkSideways"
