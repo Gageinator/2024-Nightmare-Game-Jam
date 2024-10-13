@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://fdikxlngqvlf"]
+[gd_scene load_steps=6 format=3 uid="uid://fdikxlngqvlf"]
 
 [ext_resource type="Texture2D" uid="uid://clilyrgkt1o14" path="res://assets/Temp2.png" id="1_uxbiv"]
 [ext_resource type="PackedScene" uid="uid://utade6cxpwll" path="res://scenes/bingus.tscn" id="2_7qa7p"]
+[ext_resource type="PackedScene" uid="uid://k4xinxgu18v3" path="res://scenes/door.tscn" id="3_j46eu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qdo7x"]
 texture = ExtResource("1_uxbiv")
@@ -502,3 +503,10 @@ layer_0/tile_data = PackedInt32Array(-131070, 0, 1, -65534, 196608, 1, 2, 196608
 scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="Bingus"]
+
+[node name="Hallway" parent="." instance=ExtResource("3_j46eu")]
+position = Vector2(0, -97)
+scale = Vector2(6.48, 3.16)
+targetScene = "hallway_third_version_(long_boi_1st_chase).tscn"
+targetPosition = Vector2(0, -2722)
+activeNumbers = [4]
