@@ -13,3 +13,4 @@ shape = SubResource("RectangleShape2D_qgy0c")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [connection signal="body_entered" from="." to="." method="touchingDoor"]
+[connection signal="body_exited" from="." to="." method="stopTouchingDoor"]
