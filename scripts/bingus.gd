@@ -1,0 +1,54 @@
+extends CharacterBody2D
+
+@export var SPEED = 300
+
+func _ready() -> void:
+	global_position = GlobalValues.PlayerSpawnPos
+	
+func _unhandled_input(event: InputEvent) -> void:
+	#Interaction code goes here
+	if Input.is_action_just_pressed("p_interact"):
+		var actionables = $Direction/ActionableFinder.get_overlapping_areas()
+		if actionables.size() > 0:
+			if actionables[0].is_in_group("action_group"):
+				actionables[0].action()
+				return
+			elif actionables[0].is_in_group("door_group"):
+				actionables[0].changeScene.call_deferred()
+
+func _process(delta: float) -> void:
+	#TODO: Make more robust and add diagonals
+	if velocity.y > 0:
+		$PlayerSprites.play("WalkDown")
+		$PlayerSprites.flip_h = false
+		$Direction.position = Vector2(0, 10)
+	elif velocity.y < 0:
+		$PlayerSprites.play("WalkUp")
+		$PlayerSprites.flip_h = false
+		$Direction.position = Vector2(0, -10)
+	elif velocity.x > 0:
+		$PlayerSprites.play("WalkSideways")
+		$PlayerSprites.flip_h = false
+		$Direction.position = Vector2(10, 0)
+	elif velocity.x < 0:
+		$PlayerSprites.play("WalkSideways")
+		$PlayerSprites.flip_h = true
+		$Direction.position = Vector2(-10, 0)
+	else:
+		$PlayerSprites.stop()
+
+func _physics_process(delta: float) -> void:
+	#Movement code
+	var x_direction := Input.get_axis("p_left", "p_right")
+	if x_direction:
+		velocity.x = x_direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	var y_direction := Input.get_axis("p_up", "p_down")
+	if y_direction:
+		velocity.y = y_direction * SPEED
+	else:
+		velocity.y = move_toward(velocity.y, 0, SPEED)
+
+	move_and_slide()
