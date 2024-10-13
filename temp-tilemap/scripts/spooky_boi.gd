@@ -45,6 +45,26 @@ func _process(delta: float) -> void:
 		player.z_index = 1
 	else:
 		player.z_index = 0
+		
+	#Rotation
+	if abs(velocity.x) > abs(velocity.y):
+		if velocity.x > 0:
+			$SpookySprites.play("move_sideways")
+			$SpookySprites.flip_h = false
+		elif velocity.x < 0:
+			$SpookySprites.play("move_sideways")
+			$SpookySprites.flip_h = true
+	elif abs(velocity.x) < abs(velocity.y):
+		if velocity.y > 0:
+			$SpookySprites.play("move_down")
+		elif velocity.y < 0:
+			$SpookySprites.play("move_up")
+			
+		if $SpookySprites.frame == 0:
+			$SpookySprites.flip_h = false
+		else:
+			$SpookySprites.flip_h = true
+		
 
 #Called every physics tick
 func _physics_process(delta: float) -> void:
