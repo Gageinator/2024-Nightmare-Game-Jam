@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://b00pomin6vd37"
+path="res://.godot/imported/Family Portrait.dialogue-92c9e2584ab81bc55a97b1863905f865.tres"
+
+[deps]
+
+source_file="res://dialogue/Family Portrait.dialogue"
+dest_files=["res://.godot/imported/Family Portrait.dialogue-92c9e2584ab81bc55a97b1863905f865.tres"]
+
+[params]
+
+defaults=true

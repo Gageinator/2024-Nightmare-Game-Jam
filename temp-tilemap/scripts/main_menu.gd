@@ -30,9 +30,9 @@ func startGamePressed() -> void:
 	pass 
 
 func startGame():
-	GlobalValues.PlayerSpawnPos = Vector2(0, -2675)
+	GlobalValues.PlayerSpawnPos = Vector2(0, 0)
 	if is_inside_tree(): #What the fuck? I didn't need this yesterday.
-		get_tree().change_scene_to_file("res://scenes/hallway_third_version_(long_boi_1st_chase).tscn")
+		get_tree().change_scene_to_file("res://scenes/bedroom.tscn")
 
 func quitGamePressed() -> void:
 	quitGame.call_deferred()

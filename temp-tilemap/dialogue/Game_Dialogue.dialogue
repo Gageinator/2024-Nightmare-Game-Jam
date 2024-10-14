@@ -1,0 +1,110 @@
+~ family_photo
+James: My entire world in a single photo.
+James: I should check on Sam after I clean up.
+=> END
+
+~ painting1
+James: I don't even know where Janet got this one. 
+=> END
+
+~ closet
+James: I'm already dressed.
+James: Had such a long night in the office that even unwinding in the garage didn't help much.
+James: Guess I was so tired I didn't bother changing.
+=> END
+
+~ mirror
+: Your a lot slimmer than the last time you looked in the mirror.
+: The bags under your eyes is an obvious tell of the late nights.
+James: I love her, but Janet needs to lay off on the questioning. I'm fine.
+James: Besides, questioning people is my job.
+=> END
+
+~ medicine_cabinet
+: You grab a toothbrush and brush your teeth.
+: Opening the medicine cabinet, you see a multitude of different pill bottles.
+James: I don't remember ever needing most of these.
+James: Did Sam need new medication. She hasn't been feeling well so I wouldn't be suprised.
+=> END
+
+~ sam_bed
+James: Sam's not here. Janet must've took her to school already.
+James: Shit, what time is it? I have to get to work.
+=> END
+
+~ toy_box1
+: It's a large box with toys inside. For some reason you feel uneasy looking in.
+James: She'll never find them here.
+=> END
+
+~ sam_closet
+: The closet is filled small dresses.
+James: I need to ask Janet to get new clothes for Sam. These ones don't fit her the best anymore.
+=> END
+
+~ office
+James: I don't need in my office right now.
+=> END
+
+~ boiler
+: The door to the boiler room.
+James: I don't need in here.
+=> END
+
+~ sofa
+James: I don't have time to relax right now.
+: But you sure as hell wish you did.
+=> END
+
+~ kitchen
+: The archway to the kitchen.
+James: I don't see Janet anywhere.
+James: At least I'll see her later tonight.
+=> END
+
+~ front_door
+: You reach for the door, but stop yourself.
+James: Damn it, forgot my keys in the bedroom.
+=> END 
+
+~ long_hallway
+James: What...?
+: You feel a chill down your neck. Like someone's breathing against it.
+James: I need to move.
+=> END
+
+~ mirror2
+: You look in the mirror. The man on the other side smiles. But that man isn't you.
+=> END
+
+~ keys
+: On the counter are the keys as you expected. And as you grab them there's a sharp pain in your arm.
+: You jerk back, holding the arm with the other. It feels like something's piercing the skin.
+James: Sh-shit. This... isn't my house. Oh God, this isn't my house!
+=> END
+
+~ traveler
+: You find a note by the sink.
+James: A Traveler of a Thousand Faces. I've never heard of it.
+: The letter reads as follows: A traveler of no renown. A wretched man plagued by thoughts vile. Set out to find an undeserved fortune. To the kingdom he went, wearing the face of a general of the northern kingdom. 
+: By night he arrived at lone castle, stretching far up into the sky. The guards, not aware of the wolf in sheep’s clothing allowed him through the gates. Through the West wing he slithered, donning the face of a maiden fair. Claiming to be the princess, guards allowed the traveler within the chamber where the king lie in slumber. 
+: And once the doors shut and the traveler knew no prying eyes were watching, from below, he grasped a knife and raised it above the unsuspecting man.
+: Down the blade flew, piercing the flesh. Again and again, it went. Rending, tearing, seething unyielding pain. 
+: Until all that remains was a husk of what once was.
+=> END
+
+~ needle
+: You see a something on the ground and pick it up.
+: It's a syringe.
+James: That's...not supossed to be here.
+=> END
+
+~ credits
+Credits
+Gage - Project Management, Programmer, Writer, Level/Puzzle Design
+Chris - Programmer, Level/Puzzle Design, TileMap Artist
+Kyle - Lead Programmer, Character Reference (James)
+Matt - Tile/TileMap Artist
+Avery - Sound/Music Design
+Owen - Character/Tile Artist
+=> END 

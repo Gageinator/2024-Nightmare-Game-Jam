@@ -98,3 +98,10 @@ func playRandomCry():
 		$CryPlayer.get_stream_playback().play_stream(load("res://assets/" + cries[index] + ".wav"))
 		#Randomize the wait time
 		$CryTimer.wait_time = randf_range(10, 20)
+
+func touchPlayer(body: Node2D) -> void:
+	if body.is_in_group("player_group"):
+		killBingus.call_deferred()
+		
+func killBingus():
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
